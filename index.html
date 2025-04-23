@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="About.html">WEATHER</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">My Projects</a></li>
+                            <li><a class="dropdown-item" href="#">Need help</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Contact us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="px-4 py-5 my-5 text-center">
+        <img class="d-block mx-auto mb-4"
+            src="https://th.bing.com/th/id/OIP.71Ch7CNcUpV81k8giE22cwHaHa?rs=1&pid=ImgDetMain" alt="" width="150"
+            height="125">
+        <h1 class="display-5 fw-bold text-body-emphasis" style="font-family: Arial, Helvetica, sans-serif;">Weather</h1>
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4hIR4qLSgtKj04MzM4PV1CR0JHQl2NWGdYWGdYjX2Xe3N7l33gsJycsOD/2c7Z//////////////8BGxsbGxwbHiEhHiotKC0qPTgzMzg9XUJHQkdCXY1YZ1hYZ1iNfZd7c3uXfeCwnJyw4P/Zztn////////////////CABEIALsBTQMBIgACEQEDEQH/xAAaAAADAQEBAQAAAAAAAAAAAAAAAQIDBAYF/9oACAEBAAAAAPOgxjG6qtN85zhAk22yq0qM1MpYjBtlVV73lCUobKZVGjmJUkwczGN1d6vpeEJqQd6WK7MVIIhqOEbbd3v09GOcpVaB7UNKpgQkpxynkbdVWt9HWZZq3ppTYN6VMznmlGWeeOayHV3rrrtvRKelurAomVGeWcZREZTCTL0133220umAxNzKUzOeeeUqM84iVq6026Nt9rptoQgJmYmIjLPOImYlSu3TXbfbTS2NgkiUomIzjOM4iJmVKR9vbfbS2MAQkomZiM884ziYmUpEg9XtpdNCklTMxERERnETCmUkJCA9R07OlMxERGecRETMqUkkhCEAC+t09F0RGcZxnEzKSSEIQgQAID0V22REqM4SBKQAGECAAEHp0NsCZVBSmUVTHOfy+7GxNghGCRICVVTq7uyrSU187tXGyR2CU9ANgWCCRoKq1OvDhj2K4gVNKZ6kNtupEK287GZc05cu2tvWqKQplY3UTved4aaTMY6JZzESGfTj1QdFSym6ipJzBaCRnJGs4CAm+jl13xpa7VIpuZiKRVxiqcSNEgyei+Wuh886PfW85cRlcVcokUywEA5vsz5To3y5q0lVdPKIsbKyZMjKUgTW/Tz85r0ac2L1ecaEOdYi46MbghlKoHma7782S010zxz0TUr/xAAYAQEBAQEBAAAAAAAAAAAAAAAAAQIDBP/aAAoCAhADEAAAAOkLCtTUsWJQKCwljlqk01LEoUgJaQqU46rUsqKSWJQlqyzQI56qxYyACqsqyoJYllggpCqsqwJYiUmsiyjUqwQJSIWAmgSwSAIlAgA4dEiUM3KWMojccmIIpO/oCCkBJSTtnnnG4ESu+00yCrkELelyXHXPWaU34tQIsEgF06Xm6M3Nm87a15bIIAArpdOTas3NF//EACEQAAICAwADAQEB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"
+                        class="d-block w-100" alt="..." width="1400" height="600">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://th.bing.com/th/id/OIP.mPHbEtoCJhWrhHhke3gd1AHaEK?w=333&h=187&c=8&rs=1&qlt=90&r=0&o=6&dpr=1.3&pid=3.1&rm=2"
+                        class="d-block w-100" alt="..." width="1400" height="600">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://th.bing.com/th/id/OIP.va--KrHOKZ-J90b2uETfeAHaEK?w=333&h=187&c=8&rs=1&qlt=90&r=0&o=6&dpr=1.3&pid=3.1&rm=2"
+                        class="d-block w-100" alt="..." width="1400" height="600"">
+          </div>
+        </div>
+        <button class=" carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+        </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+    </div>
+                <div class="container mt-5" >
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="https://th.bing.com/th/id/OIP.YJC4h7XOWsMfW8UOuz5P-wHaEK?rs=1&pid=ImgDetMain" class="card-img-top" width="100%" height="225" alt="Weather image">
+                                    <title>Placeholder</title>
+                                    <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                                        fill="#eceeef" dy=".3em">☀️Sunny</text>
+                                <div class="card-body">
+                                    <p class="card-text">"Bright skies and warm rays make for a cheerful, energizing day."
+                                        "Perfect weather for outdoor adventures and soaking in vitamin D."</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                        </div>
+                                        <small class="text-body-secondary">9 mins</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="https://th.bing.com/th/id/OIP.f5ArX0poUFGK2XleJkE_VAHaEo?rs=1&pid=ImgDetMain" class="card-img-top" width="100%" height="225" alt="Weather image">
+                                    <title>Placeholder</title>
+                                    <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                                        fill="#eceeef" dy=".3em">🌧️Rainy</text>
+                    
+                                <div class="card-body">
+                                    <p class="card-text">"Gentle showers or heavy downpours—rain brings rhythm to the day."
+                                        "Ideal for cozy moments indoors with a warm drink and a good book."</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                        </div>
+                                        <small class="text-body-secondary">9 mins</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="https://th.bing.com/th/id/OIP.D8tX7jQul2pYjDXvauky4wHaEo?rs=1&pid=ImgDetMain" class="card-img-top" width="100%" height="225" alt="Weather image">
+                                    <title>Placeholder</title>
+                                    <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                                        fill="#eceeef" dy=".3em">⛅Partly Cloudy</text>
+                               
+                                <div class="card-body">
+                                    <p class="card-text">"The sky plays peek-a-boo with the sun—light and shadows take turns."
+                                        "A balance between sun and cloud makes it comfortable all around."</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                        </div>
+                                        <small class="text-body-secondary">9 mins</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="https://th.bing.com/th/id/OIP.27LynYsKFDGqRbZfhNyLSwHaEK?rs=1&pid=ImgDetMain" class="card-img-top" width="100%" height="225" alt="Weather image">
+                                    <title>Placeholder</title>
+                                    <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                                        fill="#eceeef" dy=".3em">🌩️Thunderstorm</text>
+                              
+                                <div class="card-body">
+                                    <p class="card-text">"Crackling lightning and rolling thunder light up the dramatic sky."
+                                        "Stormy skies bring energy, awe, and a rush of cool wind."</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                        </div>
+                                        <small class="text-body-secondary">9 mins</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="https://th.bing.com/th/id/OIP.sJFO14bk3_J250E-Tk8GQwHaEn?rs=1&pid=ImgDetMain" class="card-img-top" width="100%" height="225" alt="Weather image">
+                                    <title>Placeholder</title>
+                                    <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                                        fill="#eceeef" dy=".3em">❄️ Snowy</text>
+                            
+                                <div class="card-body">
+                                    <p class="card-text">"Soft snowflakes drift down, blanketing everything in peaceful white."
+                                        "Perfect for snowball fights, hot cocoa, and winter wonderlands."</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                        </div>
+                                        <small class="text-body-secondary">9 mins</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="https://images7.alphacoders.com/660/660728.jpg" class="card-img-top" width="100%" height="225" alt="Weather image">
+                                    <title>Placeholder</title>
+                                    <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                                        fill="#eceeef" dy=".3em">🌫️ Foggy</text>
+                                
+                                <div class="card-body">
+                                    <p class="card-text">"A thick mist blurs the world, wrapping it in a hushed, dreamy veil."
+                                        "Everything feels quieter, softer, like a scene from a mystery film."</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                        </div>
+                                        <small class="text-body-secondary">9 mins</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="container">
+                <footer class="py-3 my-4">
+                    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+                    </ul>
+                    <p class="text-center text-body-secondary">© 2025 Company, Inc</p>
+                </footer>
+            </div>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+                    crossorigin="anonymous">
+                </script>
+</body>
+
+</html>
